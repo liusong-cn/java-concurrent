@@ -65,7 +65,7 @@ public class DefaultThreadPool implements ThreadPool {
 
     class Worker implements Runnable, Serializable{
 
-        private static final long SerialVersionUID = 23L;
+        private static final long serialVersionUID = 23L;
 
         private int state;
 
