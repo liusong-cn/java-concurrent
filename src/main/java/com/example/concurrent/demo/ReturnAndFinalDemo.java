@@ -13,7 +13,7 @@ public class ReturnAndFinalDemo {
 
     static int test(){
         try {
-            //多个return会被finally覆盖
+            //多个return会被finally中return覆盖
             return 1;
         }finally {
             return 2;
