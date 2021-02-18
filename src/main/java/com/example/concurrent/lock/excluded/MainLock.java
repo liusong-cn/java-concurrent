@@ -28,6 +28,7 @@ public class MainLock implements Lock {
            if(getState() == 0)
                throw new IllegalStateException("state must = 1");
            setExclusiveOwnerThread(null);
+           //不适用cas的原因在于释放锁的线程必然是获取了锁的，此时为排他锁，只有一个线程占有
            setState(0);
            return true;
         }
